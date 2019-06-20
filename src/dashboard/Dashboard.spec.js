@@ -1,1 +1,20 @@
 // Test away
+import React from 'react';
+import * as rtl from '@testing-library/react';
+import 'jest-dom/extend-expect';
+import Dashboard from "./Dashboard";
+
+afterEach(rtl.cleanup);
+
+it('shows the controls and display', () => {
+  // ready to test!
+  const wrapper = rtl.render(<Dashboard />);
+});
+
+it('Defaults to correct values', () => {
+    // ready to test!
+    const wrapper = rtl.render(<Dashboard />);
+    expect(wrapper.container.firstChild.textContent).toBe("UnlockedOpen");
+  });
+
+  
